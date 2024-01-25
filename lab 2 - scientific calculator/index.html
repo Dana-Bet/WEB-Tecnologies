@@ -1,49 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Technology - lab 1</title>
-    <link rel="stylesheet" href="inc/index.css"/>
-    <style>
-        #myDiv {
-            border: 1px solid silver;
-            background-color: lightblue;
-            font-size: 18px;
-            text-align: center;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+     <div class="container">
+        <div class="monitor">0</div>
+        <div class="but1">MC</div>
+        <div class="but1">MR</div>
+        <div class="but1">M+</div>
+        <div class="but1">M-</div>
+        <div class="but1">MS</div>
+        <div class="but1">M^</div>
+        <div style="clear: both;"></div>
+        <div class="but"><var>2<sup>nd</sup></var></div>
+        <div class="but">&#960</div>
+        <div class="but">e</div>
+        <div class="but">C</div>
+        <div class="but">bs</div>
+        <div style="clear: both;"></div>
+        <div class="but"><var>x<sup>2</sup></var></div>
+        <div class="but">1/x</div>
+        <div class="but">|x|</div>
+        <div class="but">exp</div>
+        <div class="but">mod</div>
+        <div style="clear: both;"></div>
+        <div class="but">&#8730</div>
+        <div class="but">(</div>
+        <div class="but">)</div>
+        <div class="but">&#8319!</div>
+        <div class="but">&divide;</div>
+        <div style="clear: both;"></div>
+        <div class="but"><var>x<sup>y</sup></var></div>
+        <div class="but2">7</div>
+        <div class="but2">8</div>
+        <div class="but2">9</div>
+        <div class="but">&times;</div>
+        <div style="clear: both;"></div>
+        <div class="but"><var>10<sup>x</sup></var></div>
+        <div class="but2">4</div>
+        <div class="but2">5</div>
+        <div class="but2">6</div>
+        <div class="but">&minus;</div>
+        <div style="clear: both;"></div>
+        <div class="but">log</div>
+        <div class="but2">1</div>
+        <div class="but2">2</div>
+        <div class="but2">3</div>
+        <div class="but">&plus;</div>
+        <div style="clear: both;"></div>
+        <div class="but">ln</div>
+        <div class="but">&plus;/&minus;</div>
+        <div class="but2">0</div>
+        <div class="but">.</div>
+        <div class="but">&equals;</div>
+    </div>
+
+    <!-- special scripts for integration in MTW gallery - must be placed at the bottom of the HTML after your code -->
+    <script>
+        // custom config for the MTW app 
+        const mtwAppConfig = {
+            border: true // app border in the MTW page                    
         }
 
-        button{
-            width: 40px;
-            padding: 10px;
-            float: left;
+        ///////////////////////////////////////////////////////
+        // implement this functions in order to use private API        
+        const sendPrivateApiRequest = async () => {
+            // your code here:
+            // sendRequestToParent({ cat: 'getAssets' })
+        }        
+
+        const acceptPrivateApiResponse = async (data) => {
+            // process received data here:
+            // console.log(data)
         }
 
-        .but1{
-            width: auto;
-            padding: 10px 11px 10px 10px;
-        }
+        // use this in order to send on document load
+        document.addEventListener('DOMContentLoaded', () => {
+            // your code here:
+            //sendRequestToParent({ method: 'getAssets' })
+        })
 
-    </style>
-</head>
-<body>
-    <div id="myDiv">
-        <div style="float:left">1</div>
-        <div style="float:left">2</div>
-        <div style="float:left">3</div>
-        <div style="clear:both"></div>
-    </div>
-    <div>
-        <div style="float:left">4</div>
-        <div style="float:left">5</div>
-        <div style="float:left">6</div>
-        <div style="clear:both"></div>
-    </div>
-    <div>
-        <div style="float:left">7</div>
-        <div style="float:left">8</div>
-        <div style="float:left">9</div>
-        <div style="clear:both"></div>
-    </div>
-</body>
+    </script>
+    <script src="https://morethanwallet.com/appstore/index.js"></script>
+  </body>
 </html>
